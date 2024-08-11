@@ -1,0 +1,14 @@
+# Ignore Unreal Engine 5 generated files inside ExtendEditor
+/ExtendEditor/Saved/
+/ExtendEditor/Intermediate/
+/ExtendEditor/DerivedDataCache/
+/ExtendEditor/.vs/
+/ExtendEditor/Binaries/
+/ExtendEditor/Build/
+
+/ExtendEditor/*.sln
+/ExtendEditor/*.suo
+/ExtendEditor/*.vcxproj
+/ExtendEditor/*.vcxproj.filters
+/ExtendEditor/*.user
+/ExtendEditor/*.log
