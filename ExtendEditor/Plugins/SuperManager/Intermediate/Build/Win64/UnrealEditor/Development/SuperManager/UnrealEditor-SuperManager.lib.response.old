@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-SuperManager.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Intermediate\Build\Win64\ExtendEditorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Development\SuperManager\SuperManager.cpp.obj"
+"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Development\SuperManager\Default.rc2.res"
+/OUT:"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Development\SuperManager\UnrealEditor-SuperManager.lib"
