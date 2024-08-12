@@ -6,15 +6,6 @@
         "PCH": "d:\\software\\code\\repositories\\ue5-extendeditor\\extendeditor\\intermediate\\build\\win64\\extendeditoreditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
         "Includes": [
             "d:\\software\\code\\repositories\\ue5-extendeditor\\extendeditor\\plugins\\supermanager\\intermediate\\build\\win64\\unrealeditor\\development\\supermanager\\definitions.supermanager.h",
-            "d:\\software\\code\\repositories\\ue5-extendeditor\\extendeditor\\plugins\\supermanager\\source\\supermanager\\private\\assetactions\\quickassetaction.cpp",
-            "d:\\software\\code\\repositories\\ue5-extendeditor\\extendeditor\\plugins\\supermanager\\source\\supermanager\\public\\assetactions\\quickassetaction.h",
-            "d:\\game\\epic\\ue_5.0\\engine\\source\\editor\\blutility\\classes\\assetactionutility.h",
-            "d:\\game\\epic\\ue_5.0\\engine\\source\\editor\\blutility\\classes\\editorutilityobject.h",
-            "d:\\game\\epic\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\blutility\\editorutilityobject.generated.h",
-            "d:\\game\\epic\\ue_5.0\\engine\\source\\editor\\blutility\\private\\blutilitymenuextensions.h",
-            "d:\\game\\epic\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\blutility\\blutilitymenuextensions.generated.h",
-            "d:\\game\\epic\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\blutility\\assetactionutility.generated.h",
-            "d:\\software\\code\\repositories\\ue5-extendeditor\\extendeditor\\plugins\\supermanager\\intermediate\\build\\win64\\unrealeditor\\inc\\supermanager\\quickassetaction.generated.h",
             "d:\\software\\code\\repositories\\ue5-extendeditor\\extendeditor\\plugins\\supermanager\\source\\supermanager\\private\\supermanager.cpp",
             "d:\\software\\code\\repositories\\ue5-extendeditor\\extendeditor\\plugins\\supermanager\\source\\supermanager\\public\\supermanager.h"
         ],
