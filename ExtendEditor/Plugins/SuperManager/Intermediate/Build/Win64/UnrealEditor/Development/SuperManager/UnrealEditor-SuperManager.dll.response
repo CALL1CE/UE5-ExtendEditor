@@ -44,6 +44,7 @@
 "..\Intermediate\Build\Win64\UnrealEditor\Development\SlateCore\UnrealEditor-SlateCore.lib"
 "..\Intermediate\Build\Win64\UnrealEditor\Development\Core\UnrealEditor-Core.lib"
 "..\Intermediate\Build\Win64\UnrealEditor\Development\Blutility\UnrealEditor-Blutility.lib"
+"..\Plugins\Editor\EditorScriptingUtilities\Intermediate\Build\Win64\UnrealEditor\Development\EditorScriptingUtilities\UnrealEditor-EditorScriptingUtilities.lib"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"
