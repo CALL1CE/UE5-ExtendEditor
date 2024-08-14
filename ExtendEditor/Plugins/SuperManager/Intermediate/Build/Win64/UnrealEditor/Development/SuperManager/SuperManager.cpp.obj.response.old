@@ -1,5 +1,10 @@
 D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Source\SuperManager\Private\SuperManager.cpp
 /I .
+/I Editor\Blutility\Private
+/I Editor\UnrealEd\Private
+/I Editor\UnrealEd\Private\Settings
+/I Editor\PackagesDialog\Public
+/I Developer\TargetPlatform\Public
 /I D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Source\SuperManager\Private
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\CoreUObject
 /I Runtime
@@ -138,7 +143,6 @@ D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager
 /I Runtime\AudioMixer\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AudioLinkEngine
 /I Runtime\AudioLink\AudioLinkEngine\Public
-/I Developer\TargetPlatform\Public
 /I Developer\TextureFormat\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\LevelEditor
 /I Editor\LevelEditor\Public
@@ -252,8 +256,30 @@ D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager
 /I Runtime\ClothingSystemRuntimeInterface\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AnimationDataController
 /I Developer\AnimationDataController\Public
+/I D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Inc\SuperManager
 /I D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Source
 /I D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Source\SuperManager\Public
+/I ..\Intermediate\Build\Win64\UnrealEditor\Inc\Blutility
+/I Editor\Blutility\Classes
+/I Editor\Blutility\Public
+/I Editor\MainFrame\Public
+/I ..\Plugins\Editor\EditorScriptingUtilities\Intermediate\Build\Win64\UnrealEditor\Inc\EditorScriptingUtilities
+/I ..\Plugins\Editor\EditorScriptingUtilities\Source
+/I ..\Plugins\Editor\EditorScriptingUtilities\Source\EditorScriptingUtilities\Public
+/I ..\Intermediate\Build\Win64\UnrealEditor\Inc\StaticMeshEditor
+/I Editor\StaticMeshEditor\Public
+/I ..\Plugins\FX\Niagara\Intermediate\Build\Win64\UnrealEditor\Inc\Niagara
+/I ..\Plugins\FX\Niagara\Source
+/I ..\Plugins\FX\Niagara\Source\Niagara\Classes
+/I ..\Plugins\FX\Niagara\Source\Niagara\Public
+/I ..\Plugins\FX\Niagara\Intermediate\Build\Win64\UnrealEditor\Inc\NiagaraCore
+/I ..\Plugins\FX\Niagara\Source\NiagaraCore\Public
+/I ..\Intermediate\Build\Win64\UnrealEditor\Inc\VectorVM
+/I Runtime\VectorVM\Public
+/I ..\Plugins\FX\Niagara\Intermediate\Build\Win64\UnrealEditor\Inc\NiagaraShader
+/I ..\Plugins\FX\Niagara\Source\NiagaraShader\Public
+/I ..\Plugins\FX\Niagara\Source\NiagaraVertexFactories\Public
+/I Developer\DesktopPlatform\Public
 /I ThirdParty\mimalloc\include
 /I ThirdParty\LibTiff\Source\Win64
 /I ThirdParty\LibTiff\Source
@@ -274,10 +300,7 @@ D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt"
-/FI"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Intermediate\Build\Win64\ExtendEditorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/FI"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Development\SuperManager\Definitions.SuperManager.h"
-/Yu"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Intermediate\Build\Win64\ExtendEditorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Intermediate\Build\Win64\ExtendEditorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+/FI"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Development\SuperManager\Definitions.h"
 /Fo"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Development\SuperManager\SuperManager.cpp.obj"
 /sourceDependencies D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Development\SuperManager\SuperManager.cpp.json
 /Zc:inline
