@@ -3,7 +3,7 @@
     "Data": {
         "Source": "d:\\software\\code\\repositories\\ue5-extendeditor\\extendeditor\\plugins\\supermanager\\intermediate\\build\\win64\\unrealeditor\\development\\supermanager\\module.supermanager.cpp",
         "ProvidedModule": "",
-        "PCH": "d:\\software\\code\\repositories\\ue5-extendeditor\\extendeditor\\intermediate\\build\\win64\\extendeditoreditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "PCH": "d:\\software\\code\\repositories\\ue5-extendeditor\\extendeditor\\intermediate\\build\\win64\\extendeditoreditor\\development\\unrealed\\sharedpch.unrealed.shadowerrors.h.pch",
         "Includes": [
             "d:\\software\\code\\repositories\\ue5-extendeditor\\extendeditor\\plugins\\supermanager\\intermediate\\build\\win64\\unrealeditor\\development\\supermanager\\definitions.supermanager.h",
             "d:\\software\\code\\repositories\\ue5-extendeditor\\extendeditor\\plugins\\supermanager\\source\\supermanager\\private\\supermanager.cpp",

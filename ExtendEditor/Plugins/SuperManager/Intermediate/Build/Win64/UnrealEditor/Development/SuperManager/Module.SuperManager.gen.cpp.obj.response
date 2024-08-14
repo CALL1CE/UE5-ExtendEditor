@@ -1,6 +1,10 @@
 D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Development\SuperManager\Module.SuperManager.gen.cpp
 /I .
 /I Editor\Blutility\Private
+/I Editor\UnrealEd\Private
+/I Editor\UnrealEd\Private\Settings
+/I Editor\PackagesDialog\Public
+/I Developer\TargetPlatform\Public
 /I D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Source\SuperManager\Private
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\CoreUObject
 /I Runtime
@@ -139,7 +143,6 @@ D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager
 /I Runtime\AudioMixer\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AudioLinkEngine
 /I Runtime\AudioLink\AudioLinkEngine\Public
-/I Developer\TargetPlatform\Public
 /I Developer\TextureFormat\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\LevelEditor
 /I Editor\LevelEditor\Public
@@ -297,10 +300,10 @@ D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt"
-/FI"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Intermediate\Build\Win64\ExtendEditorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/FI"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Intermediate\Build\Win64\ExtendEditorEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h"
 /FI"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Development\SuperManager\Definitions.SuperManager.h"
-/Yu"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Intermediate\Build\Win64\ExtendEditorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Intermediate\Build\Win64\ExtendEditorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+/Yu"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Intermediate\Build\Win64\ExtendEditorEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h"
+/Fp"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Intermediate\Build\Win64\ExtendEditorEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h.pch"
 /Fo"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Development\SuperManager\Module.SuperManager.gen.cpp.obj"
 /sourceDependencies D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Development\SuperManager\Module.SuperManager.gen.cpp.json
 /Zc:inline

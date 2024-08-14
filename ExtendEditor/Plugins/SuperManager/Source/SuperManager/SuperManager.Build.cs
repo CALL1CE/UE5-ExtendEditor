@@ -14,10 +14,15 @@ public class SuperManager : ModuleRules
 			}
 			);
 				
+				
 		
 		PrivateIncludePaths.AddRange(
 			new string[] {
 				System.IO.Path.GetFullPath(Target.RelativeEnginePath) + "/Source/Editor/Blutility/Private",
+                System.IO.Path.GetFullPath(Target.RelativeEnginePath) + "/Source/Editor/UnrealEd/Private",
+                System.IO.Path.GetFullPath(Target.RelativeEnginePath) + "/Source/Editor/UnrealEd/Private/Settings",
+                System.IO.Path.GetFullPath(Target.RelativeEnginePath) + "/Source/Editor/PackagesDialog/Public",
+                System.IO.Path.GetFullPath(Target.RelativeEnginePath) + "/Source/Developer/TargetPlatform/Public",
 				// ... add other private include paths required here ...
 			}
 			);
@@ -31,6 +36,7 @@ public class SuperManager : ModuleRules
 				"EditorScriptingUtilities",
 				"UMG",
 				"Niagara",
+                "UnrealEd",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);

@@ -45,6 +45,8 @@
 "..\Intermediate\Build\Win64\UnrealEditor\Development\Core\UnrealEditor-Core.lib"
 "..\Intermediate\Build\Win64\UnrealEditor\Development\Blutility\UnrealEditor-Blutility.lib"
 "..\Plugins\Editor\EditorScriptingUtilities\Intermediate\Build\Win64\UnrealEditor\Development\EditorScriptingUtilities\UnrealEditor-EditorScriptingUtilities.lib"
+"..\Intermediate\Build\Win64\UnrealEditor\Development\UMG\UnrealEditor-UMG.lib"
+"..\Plugins\FX\Niagara\Intermediate\Build\Win64\UnrealEditor\Development\Niagara\UnrealEditor-Niagara.lib"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"

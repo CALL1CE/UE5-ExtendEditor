@@ -33,7 +33,7 @@
 /NODEFAULTLIB:"LIBCD"
 /NODEFAULTLIB:"LIBCPD"
 /FUNCTIONPADMIN
-"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Intermediate\Build\Win64\ExtendEditorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Intermediate\Build\Win64\ExtendEditorEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h.obj"
 "D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Development\SuperManager\Module.SuperManager.cpp.obj"
 "D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Development\SuperManager\QuickAssetAction.cpp.obj"
 "D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Development\SuperManager\Module.SuperManager.gen.cpp.obj"
@@ -47,6 +47,7 @@
 "..\Plugins\Editor\EditorScriptingUtilities\Intermediate\Build\Win64\UnrealEditor\Development\EditorScriptingUtilities\UnrealEditor-EditorScriptingUtilities.lib"
 "..\Intermediate\Build\Win64\UnrealEditor\Development\UMG\UnrealEditor-UMG.lib"
 "..\Plugins\FX\Niagara\Intermediate\Build\Win64\UnrealEditor\Development\Niagara\UnrealEditor-Niagara.lib"
+"..\Intermediate\Build\Win64\UnrealEditor\Development\UnrealEd\UnrealEditor-UnrealEd.lib"
 "delayimp.lib"
 "wininet.lib"
 "rpcrt4.lib"

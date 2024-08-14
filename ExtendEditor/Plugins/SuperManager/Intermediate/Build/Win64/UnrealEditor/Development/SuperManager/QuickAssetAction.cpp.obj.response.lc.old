@@ -265,6 +265,18 @@ D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager
 /I ..\Plugins\Editor\EditorScriptingUtilities\Source\EditorScriptingUtilities\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\StaticMeshEditor
 /I Editor\StaticMeshEditor\Public
+/I ..\Plugins\FX\Niagara\Intermediate\Build\Win64\UnrealEditor\Inc\Niagara
+/I ..\Plugins\FX\Niagara\Source
+/I ..\Plugins\FX\Niagara\Source\Niagara\Classes
+/I ..\Plugins\FX\Niagara\Source\Niagara\Public
+/I ..\Plugins\FX\Niagara\Intermediate\Build\Win64\UnrealEditor\Inc\NiagaraCore
+/I ..\Plugins\FX\Niagara\Source\NiagaraCore\Public
+/I ..\Intermediate\Build\Win64\UnrealEditor\Inc\VectorVM
+/I Runtime\VectorVM\Public
+/I ..\Plugins\FX\Niagara\Intermediate\Build\Win64\UnrealEditor\Inc\NiagaraShader
+/I ..\Plugins\FX\Niagara\Source\NiagaraShader\Public
+/I ..\Plugins\FX\Niagara\Source\NiagaraVertexFactories\Public
+/I Developer\DesktopPlatform\Public
 /I ThirdParty\mimalloc\include
 /I ThirdParty\LibTiff\Source\Win64
 /I ThirdParty\LibTiff\Source
@@ -285,10 +297,10 @@ D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt"
-/FI"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Intermediate\Build\Win64\ExtendEditorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/FI"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Intermediate\Build\Win64\ExtendEditorEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h"
 /FI"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Development\SuperManager\Definitions.SuperManager.h"
-/Yu"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Intermediate\Build\Win64\ExtendEditorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Intermediate\Build\Win64\ExtendEditorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+/Yu"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Intermediate\Build\Win64\ExtendEditorEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h"
+/Fp"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Intermediate\Build\Win64\ExtendEditorEditor\Development\UnrealEd\SharedPCH.UnrealEd.ShadowErrors.h.pch"
 /Fo"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Development\SuperManager\QuickAssetAction.cpp.lc.obj"
 /sourceDependencies"D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Development\SuperManager\QuickAssetAction.cpp.lc.json"
 /Zc:inline
