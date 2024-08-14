@@ -40,3 +40,41 @@ void UQuickAssetAction::DuplicateAssets(int32 NumOfDuplicates)
 		//Print(TEXT("Successfully duplicated " + FString::FromInt(Counter) + " files"), FColor::Green);
 	}
 }
+
+void UQuickAssetAction::AddPrefix()
+{
+	TArray<UObject*> SelectedObjects = UEditorUtilityLibrary::GetSelectedAssets();
+	uint32 Counter = 0;
+
+	for (UObject* Object : SelectedObjects)
+	{
+		if(!Object) continue;
+
+		FString* PrefixFound = PrefixMap.Find(Object->GetClass());
+
+		//如果返回null或者返回的字符串是空的
+		if (!PrefixFound || PrefixFound->IsEmpty())
+		{
+			Print(TEXT("Failed to find prefix for class ") + Object->GetClass()->GetName(), FColor::Red);
+			continue;
+		}
+
+		FString OldName = Object->GetName();
+
+		if (OldName.StartsWith(*PrefixFound))
+		{
+			Print(TEXT(" already has prefix added"), FColor::Red);
+			continue;
+		}
+
+		const FString NewNameWithPrefix = *PrefixFound + OldName;
+
+		UEditorUtilityLibrary::RenameAsset(Object, NewNameWithPrefix);
+		++Counter;
+	}
+	if (Counter > 0)
+	{
+		ShowNotifyInfo(TEXT("Successfully renamed ") + FString::FromInt(Counter) + " assets");
+	}
+
+}

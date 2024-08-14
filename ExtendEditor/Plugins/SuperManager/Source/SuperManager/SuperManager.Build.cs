@@ -29,6 +29,8 @@ public class SuperManager : ModuleRules
 				"Core",
 				"Blutility",
 				"EditorScriptingUtilities",
+				"UMG",
+				"Niagara",
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);
