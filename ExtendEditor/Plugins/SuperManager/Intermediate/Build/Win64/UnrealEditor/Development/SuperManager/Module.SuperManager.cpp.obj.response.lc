@@ -1,6 +1,10 @@
 D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Intermediate\Build\Win64\UnrealEditor\Development\SuperManager\Module.SuperManager.cpp
 /I .
 /I Editor\Blutility\Private
+/I Editor\UnrealEd\Private
+/I Editor\UnrealEd\Private\Settings
+/I Editor\PackagesDialog\Public
+/I Developer\TargetPlatform\Public
 /I D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager\Source\SuperManager\Private
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\CoreUObject
 /I Runtime
@@ -139,7 +143,6 @@ D:\SOFTWARE\code\Repositories\UE5-ExtendEditor\ExtendEditor\Plugins\SuperManager
 /I Runtime\AudioMixer\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\AudioLinkEngine
 /I Runtime\AudioLink\AudioLinkEngine\Public
-/I Developer\TargetPlatform\Public
 /I Developer\TextureFormat\Public
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\LevelEditor
 /I Editor\LevelEditor\Public

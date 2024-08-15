@@ -13,7 +13,7 @@ void UQuickAssetAction::DuplicateAssets(int32 NumOfDuplicates)
 {
 	if (NumOfDuplicates <= 0)
 	{
-		ShowMsgDialog(EAppMsgType::Ok, TEXT("Please enter a VALID number!"));
+		DebugHeader::ShowMsgDialog(EAppMsgType::Ok, TEXT("Please enter a VALID number!"));
 		//Print(TEXT("Please enter a VALID number!"), FColor::Red);
 		return;
 	}
@@ -39,7 +39,7 @@ void UQuickAssetAction::DuplicateAssets(int32 NumOfDuplicates)
 
 	if (Counter > 0)
 	{
-		ShowNotifyInfo(TEXT("Successfully duplicated " + FString::FromInt(Counter) + " files"));
+		DebugHeader::ShowNotifyInfo(TEXT("Successfully duplicated " + FString::FromInt(Counter) + " files"));
 		//Print(TEXT("Successfully duplicated " + FString::FromInt(Counter) + " files"), FColor::Green);
 	}
 }
@@ -58,7 +58,7 @@ void UQuickAssetAction::AddPrefix()
 		//如果返回null或者返回的字符串是空的
 		if (!PrefixFound || PrefixFound->IsEmpty())
 		{
-			Print(TEXT("Failed to find prefix for class ") + Object->GetClass()->GetName(), FColor::Red);
+			DebugHeader::Print(TEXT("Failed to find prefix for class ") + Object->GetClass()->GetName(), FColor::Red);
 			continue;
 		}
 
@@ -66,7 +66,7 @@ void UQuickAssetAction::AddPrefix()
 
 		if (OldName.StartsWith(*PrefixFound))
 		{
-			Print(TEXT(" already has prefix added"), FColor::Red);
+			DebugHeader::Print(TEXT(" already has prefix added"), FColor::Red);
 			continue;
 		}
 
@@ -92,7 +92,7 @@ void UQuickAssetAction::AddPrefix()
 	}
 	if (Counter > 0)
 	{
-		ShowNotifyInfo(TEXT("Successfully renamed ") + FString::FromInt(Counter) + " assets");
+		DebugHeader::ShowNotifyInfo(TEXT("Successfully renamed ") + FString::FromInt(Counter) + " assets");
 	}
 
 }
@@ -118,13 +118,13 @@ void UQuickAssetAction::RemoveUnusedAssets()
 
 	if (UnusedAssetData.Num() == 0)
 	{
-		ShowMsgDialog(EAppMsgType::Ok, TEXT("No unused asset found among selected assets"), false);
+		DebugHeader::ShowMsgDialog(EAppMsgType::Ok, TEXT("No unused asset found among selected assets"), false);
 		return;
 	}
 
 	const int32 NumOfAssetsDeleted = ObjectTools::DeleteAssets(UnusedAssetData);
 	if (NumOfAssetsDeleted == 0) return;
-	ShowNotifyInfo(TEXT("Successfully deleted " + FString::FromInt(NumOfAssetsDeleted) + TEXT(" unused assets")));
+	DebugHeader::ShowNotifyInfo(TEXT("Successfully deleted " + FString::FromInt(NumOfAssetsDeleted) + TEXT(" unused assets")));
 
 }
 

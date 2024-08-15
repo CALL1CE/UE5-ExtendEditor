@@ -334,7 +334,18 @@
             "d:\\game\\epic\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealed\\thumbnailmanager.generated.h",
             "d:\\game\\epic\\ue_5.0\\engine\\source\\editor\\unrealed\\public\\automatedassetimportdata.h",
             "d:\\game\\epic\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\unrealed\\automatedassetimportdata.generated.h",
-            "d:\\game\\epic\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\assettools\\iassettools.generated.h"
+            "d:\\game\\epic\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\assettools\\iassettools.generated.h",
+            "d:\\software\\code\\repositories\\ue5-extendeditor\\extendeditor\\plugins\\supermanager\\source\\supermanager\\private\\supermanager.cpp",
+            "d:\\software\\code\\repositories\\ue5-extendeditor\\extendeditor\\plugins\\supermanager\\source\\supermanager\\public\\supermanager.h",
+            "d:\\game\\epic\\ue_5.0\\engine\\source\\editor\\contentbrowser\\public\\contentbrowsermodule.h",
+            "d:\\game\\epic\\ue_5.0\\engine\\source\\editor\\contentbrowser\\public\\contentbrowserdelegates.h",
+            "d:\\game\\epic\\ue_5.0\\engine\\source\\editor\\contentbrowserdata\\public\\contentbrowserdatalegacybridge.h",
+            "d:\\game\\epic\\ue_5.0\\engine\\source\\editor\\contentbrowserdata\\public\\contentbrowseritemdata.h",
+            "d:\\game\\epic\\ue_5.0\\engine\\source\\editor\\contentbrowserdata\\public\\contentbrowserdatamenucontexts.h",
+            "d:\\game\\epic\\ue_5.0\\engine\\source\\editor\\contentbrowserdata\\public\\contentbrowseritem.h",
+            "d:\\game\\epic\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\contentbrowserdata\\contentbrowseritem.generated.h",
+            "d:\\game\\epic\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\contentbrowserdata\\contentbrowserdatamenucontexts.generated.h",
+            "d:\\game\\epic\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\contentbrowserdata\\contentbrowserdatalegacybridge.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
