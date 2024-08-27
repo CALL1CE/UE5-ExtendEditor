@@ -5,6 +5,8 @@
 # Ignore Binaries and Intermediate folders in all Plugin subdirectories
 /ExtendEditor/Plugins/*/Binaries/
 /ExtendEditor/Plugins/*/Intermediate/
+/ExtendEditor/Plugins/SuperManager/Binaries/
+/ExtendEditor/Plugins/SuperManager/Intermediate/
 
 # Ignore other common UE4/UE5 build files
 /ExtendEditor/Saved/
