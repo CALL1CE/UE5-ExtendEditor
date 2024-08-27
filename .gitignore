@@ -1,11 +1,18 @@
-# Ignore Unreal Engine 5 generated files inside ExtendEditor
-/ExtendEditor/Saved/
+# Ignore Binaries and Intermediate folders for the main project
+/ExtendEditor/Binaries/
 /ExtendEditor/Intermediate/
+
+# Ignore Binaries and Intermediate folders in all Plugin subdirectories
+/ExtendEditor/Plugins/*/Binaries/
+/ExtendEditor/Plugins/*/Intermediate/
+
+# Ignore other common UE4/UE5 build files
+/ExtendEditor/Saved/
 /ExtendEditor/DerivedDataCache/
 /ExtendEditor/.vs/
-/ExtendEditor/Binaries/
 /ExtendEditor/Build/
 
+# Ignore user-specific files
 /ExtendEditor/*.sln
 /ExtendEditor/*.suo
 /ExtendEditor/*.vcxproj
