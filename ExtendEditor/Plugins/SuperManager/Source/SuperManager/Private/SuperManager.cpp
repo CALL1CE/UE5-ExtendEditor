@@ -39,6 +39,7 @@ TSharedRef<FExtender> FSuperManagerModule::CustomCBMenuExtender(const TArray<FSt
 {
 	TSharedRef<FExtender> MenuExtender(new FExtender());
 
+	//see hook : Editor preferences->display ui extension points
 	if (SelectedPaths.Num() > 0)
 	{
 		MenuExtender->AddMenuExtension(FName("Delete"), // Extention hook, position to insert
@@ -60,6 +61,14 @@ void FSuperManagerModule::AddCBMenuEntry(class FMenuBuilder& MenuBuilder)
 		FSlateIcon(),
 		FExecuteAction::CreateRaw(this,&FSuperManagerModule::OnDeleteUnusedAssetButtonClicked) //the actual function
 	);
+
+	MenuBuilder.AddMenuEntry(
+		FText::FromString(TEXT("Delete Empty Folders")), // Title
+		FText::FromString(TEXT("Safty delete all Empty Folders")), //Tooltip
+		FSlateIcon(),
+		FExecuteAction::CreateRaw(this, &FSuperManagerModule::OnDeleteEmptyFoldersButtonClicked) //the actual function
+	);
+
 }
 
 void FSuperManagerModule::OnDeleteUnusedAssetButtonClicked()
@@ -121,6 +130,11 @@ void FSuperManagerModule::OnDeleteUnusedAssetButtonClicked()
 	{
 		DebugHeader::ShowMsgDialog(EAppMsgType::Ok, TEXT("No unused asset found under selected folder"),false);
 	}
+}
+
+void FSuperManagerModule::OnDeleteEmptyFoldersButtonClicked()
+{
+	DebugHeader::Print(TEXT("delete empty folders clicked"), FColor::Cyan);
 }
 
 void FSuperManagerModule::FixUpRedirectors()
