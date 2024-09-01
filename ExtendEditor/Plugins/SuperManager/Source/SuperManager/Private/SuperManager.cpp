@@ -69,6 +69,13 @@ void FSuperManagerModule::AddCBMenuEntry(class FMenuBuilder& MenuBuilder)
 		FExecuteAction::CreateRaw(this, &FSuperManagerModule::OnDeleteEmptyFoldersButtonClicked) //the actual function
 	);
 
+	MenuBuilder.AddMenuEntry(
+		FText::FromString(TEXT("Advance Deletion")), // Title
+		FText::FromString(TEXT("List assets by specific condition in a tab for deleting")), //Tooltip
+		FSlateIcon(),
+		FExecuteAction::CreateRaw(this, &FSuperManagerModule::OnAdvanceDeletionButtonClicked) //the actual function
+	);
+
 }
 
 void FSuperManagerModule::OnDeleteUnusedAssetButtonClicked()
@@ -189,6 +196,11 @@ void FSuperManagerModule::OnDeleteEmptyFoldersButtonClicked()
 	{
 		DebugHeader::ShowNotifyInfo(TEXT("Successfully deleted ") + FString::FromInt(Counter) + (Counter==1?TEXT(" folder"): TEXT(" folders")));
 	}
+}
+
+void FSuperManagerModule::OnAdvanceDeletionButtonClicked()
+{
+	DebugHeader::Print(TEXT("wroking"), FColor::Cyan);
 }
 
 void FSuperManagerModule::FixUpRedirectors()

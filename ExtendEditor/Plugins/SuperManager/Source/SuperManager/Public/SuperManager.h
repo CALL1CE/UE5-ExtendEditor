@@ -29,6 +29,8 @@ private:
 
 	void OnDeleteEmptyFoldersButtonClicked();
 
+	void OnAdvanceDeletionButtonClicked();
+
 	void FixUpRedirectors();
 #pragma endregion
 };
