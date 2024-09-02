@@ -8,9 +8,23 @@ void SAdvanceDeletionTab::Construct(const FArguments& InArgs)
 {
 	bCanSupportFocus = true;
 
+	FSlateFontInfo TitleTextFont = FCoreStyle::Get().GetFontStyle(FName("EmbossedText"));
+	TitleTextFont.Size = 30;
+
 	ChildSlot
 		[
-			SNew(STextBlock).Text(FText::FromString(InArgs._TEstString))
+			//Main vertival box
+			SNew(SVerticalBox)
+
+			//First vertical slot for title text
+			+SVerticalBox::Slot().AutoHeight()
+			[
+				SNew(STextBlock)
+				.Text(FText::FromString(TEXT("Advance Deletion")))
+				.Font(TitleTextFont)
+				.Justification(ETextJustify::Center)
+				.ColorAndOpacity(FColor::White)
+			]
 		];
 
 }
