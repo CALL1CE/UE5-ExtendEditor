@@ -15,6 +15,9 @@ class SAdvanceDeletionTab :public SCompoundWidget
 public:
 	void Construct(const FArguments& InArgs);
 private:
+
+#pragma region RowWidgetForAssetListView
+
 	TArray< TSharedPtr<FAssetData> > StoredAssetsDataArray;
 
 	TSharedRef< SListView< TSharedPtr<FAssetData> > > ConstructAssetListView();
@@ -34,6 +37,22 @@ private:
 	TSharedRef<SButton> ConstructButtonForRowWidget(const TSharedPtr<FAssetData>& AssetDataToDisplay);
 
 	FReply OnDeleteButtonClicked(TSharedPtr<FAssetData> ClickedAssetData);
+
+#pragma endregion
+
+	TSharedRef<SButton> ConstructButtonForDeleteAll();
+
+	TSharedRef<SButton> ConstructButtonForSelectAll();
+
+	TSharedRef<SButton> ConstructButtonForDeselectAll();
+
+	FReply OnDeleteAllButtonClicked();
+
+	FReply OnSelectAllButtonClicked();
+
+	FReply OnDeselectAllButtonClicked();
+
+	TSharedRef<STextBlock> ConstructTextForTabButtons(const FString& TextContent);
 
 	FSlateFontInfo GetEmbossedTextFont() const { return FCoreStyle::Get().GetFontStyle(FName("EmbossedText")); }
 
