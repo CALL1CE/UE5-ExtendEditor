@@ -40,6 +40,8 @@ private:
 
 #pragma endregion
 
+#pragma region TabButtons
+
 	TSharedRef<SButton> ConstructButtonForDeleteAll();
 
 	TSharedRef<SButton> ConstructButtonForSelectAll();
@@ -53,6 +55,10 @@ private:
 	FReply OnDeselectAllButtonClicked();
 
 	TSharedRef<STextBlock> ConstructTextForTabButtons(const FString& TextContent);
+
+#pragma endregion
+
+	TArray <TSharedPtr<FAssetData> > AssetsDataToDeleteArray;
 
 	FSlateFontInfo GetEmbossedTextFont() const { return FCoreStyle::Get().GetFontStyle(FName("EmbossedText")); }
 

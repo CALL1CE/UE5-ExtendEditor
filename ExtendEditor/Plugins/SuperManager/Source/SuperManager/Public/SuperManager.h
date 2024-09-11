@@ -49,5 +49,7 @@ public:
 
 	bool DeleteSingleAssetForAssetList(const FAssetData& AssetDataToDelete);
 
+	bool DeleteMultipleAssetsForAssetList(const TArray<FAssetData>& AssetsToDelete);
+
 #pragma endregion
 };
