@@ -20,6 +20,10 @@ private:
 
 	TArray< TSharedPtr<FAssetData> > StoredAssetsDataArray;
 
+	TArray< TSharedRef <SCheckBox> > CheckBoxsArray;
+
+	TArray <TSharedPtr<FAssetData> > AssetsDataToDeleteArray;
+
 	TSharedRef< SListView< TSharedPtr<FAssetData> > > ConstructAssetListView();
 
 	TSharedPtr< SListView< TSharedPtr<FAssetData> > > ConstructedAssetListView;
@@ -57,8 +61,6 @@ private:
 	TSharedRef<STextBlock> ConstructTextForTabButtons(const FString& TextContent);
 
 #pragma endregion
-
-	TArray <TSharedPtr<FAssetData> > AssetsDataToDeleteArray;
 
 	FSlateFontInfo GetEmbossedTextFont() const { return FCoreStyle::Get().GetFontStyle(FName("EmbossedText")); }
 
