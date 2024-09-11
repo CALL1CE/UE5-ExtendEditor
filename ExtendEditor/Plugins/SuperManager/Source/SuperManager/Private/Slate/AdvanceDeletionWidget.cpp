@@ -6,12 +6,18 @@
 #include "Debugheader.h"
 #include "SuperManager.h"
 
+#define ListAll TEXT("List All Available Assets")
+
 void SAdvanceDeletionTab::Construct(const FArguments& InArgs)
 {
 	bCanSupportFocus = true;
 	StoredAssetsDataArray = InArgs._AssetsDataToStore;
 	FSlateFontInfo TitleTextFont = FCoreStyle::Get().GetFontStyle(FName("EmbossedText"));
 	TitleTextFont.Size = 30;
+	CheckBoxsArray.Empty();
+	AssetsDataToDeleteArray.Empty();
+	
+	ComboBoxSourceItems.Add(MakeShared<FString>(ListAll));
 
 	ChildSlot
 		[
@@ -34,6 +40,13 @@ void SAdvanceDeletionTab::Construct(const FArguments& InArgs)
 				.AutoHeight()
 				[
 					SNew(SHorizontalBox)
+					//Combox Box Slot
+					+SHorizontalBox::Slot()
+					.AutoWidth()
+					[
+						ConstructComboBox()
+					]
+
 				]
 
 			//Third slot for asset list
@@ -75,7 +88,43 @@ void SAdvanceDeletionTab::Construct(const FArguments& InArgs)
 		];
 
 }
+
+#pragma region ComboBoxForListingCondition
+
+TSharedRef<SComboBox<TSharedPtr<FString> > > SAdvanceDeletionTab::ConstructComboBox()
+{
+	TSharedRef<SComboBox < TSharedPtr <FString> > > ConstructedComboBox =
+		SNew(SComboBox < TSharedPtr <FString> >)
+		.OptionsSource(&ComboBoxSourceItems)
+		.OnGenerateWidget(this, &SAdvanceDeletionTab::OnGenerateComboContent)
+		.OnSelectionChanged(this, &SAdvanceDeletionTab::OnComboSelectionChanged)
+		[
+			SAssignNew(ComboDisplayTextBlock, STextBlock).Text(FText::FromString(TEXT("List Assets Option")))
+		];
+	return ConstructedComboBox;
+}
+
+
+TSharedRef<SWidget> SAdvanceDeletionTab::OnGenerateComboContent(TSharedPtr<FString> SourceItem)
+{
+	TSharedRef<STextBlock> ConstructedComboText = SNew(STextBlock)
+		.Text(FText::FromString(*SourceItem.Get()));
+
+	return ConstructedComboText;
+}
+
+void SAdvanceDeletionTab::OnComboSelectionChanged(TSharedPtr<FString> SelectedOption, ESelectInfo::Type InSelectInfo)
+{
+	DebugHeader::Print(*SelectedOption.Get(), FColor::Cyan);
+
+	ComboDisplayTextBlock->SetText(FText::FromString(*SelectedOption.Get()));
+}
+
+#pragma endregion
+
 #pragma region RowWidgetForAssetListView
+
+
 
 TSharedRef<SListView<TSharedPtr<FAssetData>>> SAdvanceDeletionTab::ConstructAssetListView()
 {
