@@ -16,6 +16,10 @@ public:
 	void Construct(const FArguments& InArgs);
 private:
 
+	TArray< TSharedPtr<FAssetData> > StoredAssetsDataArray;
+
+	TArray< TSharedPtr<FAssetData> > DisplayedAssetsData;
+
 #pragma region ComboBoxForListingCondition
 
 	TSharedRef<SComboBox<TSharedPtr<FString> > > ConstructComboBox();
@@ -32,8 +36,6 @@ private:
 
 
 #pragma region RowWidgetForAssetListView
-
-	TArray< TSharedPtr<FAssetData> > StoredAssetsDataArray;
 
 	TArray< TSharedRef <SCheckBox> > CheckBoxsArray;
 

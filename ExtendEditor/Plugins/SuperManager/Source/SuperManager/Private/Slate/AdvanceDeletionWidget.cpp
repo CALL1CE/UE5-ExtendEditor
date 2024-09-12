@@ -7,17 +7,21 @@
 #include "SuperManager.h"
 
 #define ListAll TEXT("List All Available Assets")
+#define ListUnused TEXT("List Unused Assets")
 
 void SAdvanceDeletionTab::Construct(const FArguments& InArgs)
 {
 	bCanSupportFocus = true;
 	StoredAssetsDataArray = InArgs._AssetsDataToStore;
+	DisplayedAssetsData = StoredAssetsDataArray;
+
 	FSlateFontInfo TitleTextFont = FCoreStyle::Get().GetFontStyle(FName("EmbossedText"));
 	TitleTextFont.Size = 30;
 	CheckBoxsArray.Empty();
 	AssetsDataToDeleteArray.Empty();
 	
 	ComboBoxSourceItems.Add(MakeShared<FString>(ListAll));
+	ComboBoxSourceItems.Add(MakeShared<FString>(ListUnused));
 
 	ChildSlot
 		[
@@ -118,6 +122,18 @@ void SAdvanceDeletionTab::OnComboSelectionChanged(TSharedPtr<FString> SelectedOp
 	DebugHeader::Print(*SelectedOption.Get(), FColor::Cyan);
 
 	ComboDisplayTextBlock->SetText(FText::FromString(*SelectedOption.Get()));
+	
+	FSuperManagerModule& SuperManagerModule = FModuleManager::LoadModuleChecked<FSuperManagerModule>(TEXT("SuperManager"));
+
+	if (*SelectedOption.Get() == ListAll)
+	{
+
+	}
+	else if (*SelectedOption.Get() == ListUnused)
+	{
+		SuperManagerModule.ListUnusedAssetsForAssetList(StoredAssetsDataArray, DisplayedAssetsData);
+		RefreshAssetListView();
+	}
 }
 
 #pragma endregion
@@ -130,7 +146,7 @@ TSharedRef<SListView<TSharedPtr<FAssetData>>> SAdvanceDeletionTab::ConstructAsse
 {
 	ConstructedAssetListView = SNew(SListView< TSharedPtr<FAssetData> >)
 		.ItemHeight(24.f)
-		.ListItemsSource(&StoredAssetsDataArray)
+		.ListItemsSource(&DisplayedAssetsData)
 		.OnGenerateRow(this, &SAdvanceDeletionTab::OnGenerateRowForList);
 
 	return ConstructedAssetListView.ToSharedRef();
