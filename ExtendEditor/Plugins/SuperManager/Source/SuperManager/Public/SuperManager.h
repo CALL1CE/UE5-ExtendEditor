@@ -31,7 +31,7 @@ private:
 
 	void OnAdvanceDeletionButtonClicked();
 
-	
+	void FixUpRedirectors();
 #pragma endregion
 
 #pragma region CustomEditorTab
@@ -54,6 +54,7 @@ public:
 	void ListUnusedAssetsForAssetList(const TArray< TSharedPtr<FAssetData> >& AssetDataToFilter,
 		TArray< TSharedPtr<FAssetData> >& OutUnusedAssetsData);
 
-	void FixUpRedirectors();
+	void ListSameNameAssetsForAssetList(const TArray< TSharedPtr<FAssetData> >& AssetDataToFilter,
+		TArray< TSharedPtr<FAssetData> >& OutSameNameAssetsData);
 #pragma endregion
 };

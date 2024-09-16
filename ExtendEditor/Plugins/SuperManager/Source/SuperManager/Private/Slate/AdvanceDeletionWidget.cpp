@@ -8,6 +8,8 @@
 
 #define ListAll TEXT("List All Available Assets")
 #define ListUnused TEXT("List Unused Assets")
+#define ListSameName TEXT("List Same Name Assets")
+
 
 void SAdvanceDeletionTab::Construct(const FArguments& InArgs)
 {
@@ -22,6 +24,7 @@ void SAdvanceDeletionTab::Construct(const FArguments& InArgs)
 	
 	ComboBoxSourceItems.Add(MakeShared<FString>(ListAll));
 	ComboBoxSourceItems.Add(MakeShared<FString>(ListUnused));
+	ComboBoxSourceItems.Add(MakeShared<FString>(ListSameName));
 
 	ChildSlot
 		[
@@ -134,6 +137,11 @@ void SAdvanceDeletionTab::OnComboSelectionChanged(TSharedPtr<FString> SelectedOp
 	else if (*SelectedOption.Get() == ListUnused)
 	{
 		SuperManagerModule.ListUnusedAssetsForAssetList(StoredAssetsDataArray, DisplayedAssetsData);
+		RefreshAssetListView();
+	}
+	else if (*SelectedOption.Get() == ListSameName)
+	{
+		SuperManagerModule.ListSameNameAssetsForAssetList(StoredAssetsDataArray, DisplayedAssetsData);
 		RefreshAssetListView();
 	}
 }
