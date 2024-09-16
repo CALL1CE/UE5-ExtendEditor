@@ -111,6 +111,7 @@ TSharedRef<SComboBox<TSharedPtr<FString> > > SAdvanceDeletionTab::ConstructCombo
 
 TSharedRef<SWidget> SAdvanceDeletionTab::OnGenerateComboContent(TSharedPtr<FString> SourceItem)
 {
+
 	TSharedRef<STextBlock> ConstructedComboText = SNew(STextBlock)
 		.Text(FText::FromString(*SourceItem.Get()));
 
@@ -121,13 +122,14 @@ void SAdvanceDeletionTab::OnComboSelectionChanged(TSharedPtr<FString> SelectedOp
 {
 	DebugHeader::Print(*SelectedOption.Get(), FColor::Cyan);
 
-	ComboDisplayTextBlock->SetText(FText::FromString(*SelectedOption.Get()));
-	
 	FSuperManagerModule& SuperManagerModule = FModuleManager::LoadModuleChecked<FSuperManagerModule>(TEXT("SuperManager"));
+
+	ComboDisplayTextBlock->SetText(FText::FromString(*SelectedOption.Get()));
 
 	if (*SelectedOption.Get() == ListAll)
 	{
-
+		DisplayedAssetsData = StoredAssetsDataArray;
+		RefreshAssetListView();
 	}
 	else if (*SelectedOption.Get() == ListUnused)
 	{
@@ -267,8 +269,14 @@ FReply SAdvanceDeletionTab::OnDeleteButtonClicked(TSharedPtr<FAssetData> Clicked
 		{
 			StoredAssetsDataArray.Remove(ClickedAssetData);
 		}
-	}
 
+		if (DisplayedAssetsData.Contains(ClickedAssetData))
+		{
+			DisplayedAssetsData.Remove(ClickedAssetData);
+		}
+		RefreshAssetListView();
+	}
+	
 	return FReply::Handled();
 }
 
@@ -350,6 +358,12 @@ FReply SAdvanceDeletionTab::OnDeleteAllButtonClicked()
 			{
 				StoredAssetsDataArray.Remove(DeleteData);
 			}
+
+			if (DisplayedAssetsData.Contains(DeleteData))
+			{
+				DisplayedAssetsData.Remove(DeleteData);
+			}
+
 		}
 
 		RefreshAssetListView();
