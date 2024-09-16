@@ -59,6 +59,8 @@ private:
 
 	FReply OnDeleteButtonClicked(TSharedPtr<FAssetData> ClickedAssetData);
 
+	void OnRowWidgetMouseButtonClicked(TSharedPtr<FAssetData> ClickedData);
+
 #pragma endregion
 
 #pragma region TabButtons

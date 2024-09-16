@@ -56,5 +56,7 @@ public:
 
 	void ListSameNameAssetsForAssetList(const TArray< TSharedPtr<FAssetData> >& AssetDataToFilter,
 		TArray< TSharedPtr<FAssetData> >& OutSameNameAssetsData);
+
+	void SyncCBToClickedAssetForAssetList(const FString& AssetPathToSync);
 #pragma endregion
 };
