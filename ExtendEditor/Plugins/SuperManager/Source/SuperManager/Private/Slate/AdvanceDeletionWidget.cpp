@@ -17,7 +17,7 @@ void SAdvanceDeletionTab::Construct(const FArguments& InArgs)
 	StoredAssetsDataArray = InArgs._AssetsDataToStore;
 	DisplayedAssetsData = StoredAssetsDataArray;
 
-	FSlateFontInfo TitleTextFont = FCoreStyle::Get().GetFontStyle(FName("EmbossedText"));
+	FSlateFontInfo TitleTextFont = GetEmbossedTextFont();
 	TitleTextFont.Size = 30;
 	CheckBoxsArray.Empty();
 	AssetsDataToDeleteArray.Empty();
@@ -53,6 +53,18 @@ void SAdvanceDeletionTab::Construct(const FArguments& InArgs)
 					.AutoWidth()
 					[
 						ConstructComboBox()
+					]
+
+					+SHorizontalBox::Slot()
+					.FillWidth(.6f)
+					[
+						ConstructComboHelpTexts(TEXT("Specify the listing condition in the drop down. Left mouse click to go to where asset is located"), ETextJustify::Center)
+					]
+
+					+ SHorizontalBox::Slot()
+					.FillWidth(.1f)
+					[
+						ConstructComboHelpTexts(TEXT("Current Folder:\n" + InArgs._CurrentSelectedFolder) ,ETextJustify::Right)
 					]
 
 				]
@@ -145,6 +157,17 @@ void SAdvanceDeletionTab::OnComboSelectionChanged(TSharedPtr<FString> SelectedOp
 		SuperManagerModule.ListSameNameAssetsForAssetList(StoredAssetsDataArray, DisplayedAssetsData);
 		RefreshAssetListView();
 	}
+}
+
+TSharedRef<STextBlock> SAdvanceDeletionTab::ConstructComboHelpTexts(const FString& TextContent, ETextJustify::Type TextJustify)
+{
+	TSharedRef<STextBlock> ConstructedHelpText =
+		SNew(STextBlock)
+		.Text(FText::FromString(TextContent))
+		.Justification(TextJustify)
+		.AutoWrapText(true);
+
+	return ConstructedHelpText;
 }
 
 #pragma endregion
