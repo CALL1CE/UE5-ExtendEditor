@@ -326,9 +326,9 @@ void SAdvanceDeletionTab::RefreshAssetListView()
 
 	AssetsDataToDeleteArray.Empty();
 
-	if (ConstructedAssetListView->IsVolatile())
+	if (ConstructedAssetListView.IsValid())
 	{
-		ConstructAssetListView()->RebuildList();
+		ConstructedAssetListView->RebuildList();
 	}
 }
 
