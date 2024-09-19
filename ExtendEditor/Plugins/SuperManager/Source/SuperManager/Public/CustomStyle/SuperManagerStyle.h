@@ -2,13 +2,23 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+#include "Styling/SlateStyle.h"
 
 /**
  * 
  */
 class  FSuperManagerStyle
 {
+public:
+	static void InitializeIcons();
 
+	static void ShutDown();
+
+private:
+	static FName StyleSetName;
+
+	static TSharedRef<FSlateStyleSet> CreateSlateStyleSet();
+
+	static TSharedPtr<FSlateStyleSet> CreatedSlateStyleSet;
 
 };
