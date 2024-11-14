@@ -20,10 +20,11 @@ public:
 	void CreateMaterialFromSelectedTextures();
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CreateMaterialFromSelectedTextures")
+	bool bCustomMaterialName = true;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CreateMaterialFromSelectedTextures",meta = (EditCondition = "bCustomMaterialName"))
 	FString MaterialName = TEXT("M_");
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "CreateMaterialFromSelectedTextures")
-	FString MaterialPath = TEXT("just for test");
 
 #pragma endregion QuickMaterialCreationCore
 };
